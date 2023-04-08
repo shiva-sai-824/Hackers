@@ -1,0 +1,13 @@
+#Nmap 7.93 ( https://nmap.org ) at 2023-04-08 01:20: nmap -oN nmap.txt  google.com
+
+Nmap scan report for google.com (142.250.192.46)
+Host is up (0.064s latency).
+Other addresses for google.com (not scanned): 2404:6800:4009:81f::200e
+rDNS record for 142.250.192.46: bom12s15-in-f14.1e100.net
+Not shown: 994 filtered tcp ports (no-response), 4 filtered tcp ports (host-unreach)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 51.34 seconds
+
