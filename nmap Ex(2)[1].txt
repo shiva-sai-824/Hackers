@@ -1,0 +1,79 @@
+1. More information for scanme.nmap.org
+code   --->>>   	nmap -A scanme.nmap.org
+
+Output --->>>   	Nmap 7.93 ( https://nmap.org ) at 2023-04-08 00:22 EDT
+		    	Nmap scan report for scanme.nmap.org (45.33.32.156)
+			Host is up (0.32s latency).
+			Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+			Not shown: 996 filtered tcp ports (no-response)
+			PORT      STATE SERVICE    VERSION
+			22/tcp    open  ssh        OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+     			| ssh-hostkey: 
+			|   1024 ac00a01a82ffcc5599dc672b34976b75 (DSA)
+			|   2048 203d2d44622ab05a9db5b30514c2a6b2 (RSA)
+			|   256 9602bb5e57541c4e452f564c4a24b257 (ECDSA)
+			|_  256 33fa910fe0e17b1f6d05a2b0f1544156 (ED25519)
+			80/tcp    open  http       Apache httpd 2.4.7 ((Ubuntu))
+			|_http-server-header: Apache/2.4.7 (Ubuntu)
+			|_http-favicon: Nmap Project
+			|_http-title: Go ahead and ScanMe!
+			9929/tcp  open  nping-echo Nping echo
+			31337/tcp open  tcpwrapped
+			Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+	
+			Service detection performed. Please report any incorrect 				results at https://nmap.org/submit/ .
+			Nmap done: 1 IP address (1 host up) scanned in 70.72 seconds
+
+2.Search with nmap in terminal
+
+code   --->>>  	nmap google.com
+
+Output --->>>   	Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-08 01:01 			EDT
+			Nmap scan report for google.com (142.250.182.238)
+			Host is up (0.089s latency).
+			Other addresses for google.com (not scanned): 						2404:6800:4009:828::200e
+			rDNS record for 142.250.182.238: bom07s29-in-f14.1e100.net
+			Not shown: 995 filtered tcp ports (no-response), 3 filtered 			tcp ports (host-unreach)
+			PORT    STATE SERVICE
+			80/tcp  open  http
+			443/tcp open  https
+
+3.Output into a file
+code   --->>>	nmap google.com -oN nmap.txt
+
+output --->>>	Output file with name nmap.txt is attached
+
+4. Get the following information of kmit.in
+
+
+i) IP Address: 
+
+code   --->>>	ping kmit.in
+
+Output --->>>	206.54.190.30
+
+ii) Open Ports,Services and Version:
+
+code   --->>>	sudo nmap -sV kmit.in
+
+Output --->>>	PORT    STATE SERVICE  VERSION
+     	    		21/tcp  open  ftp      Pure-FTPd
+     	    		22/tcp  open  ssh      OpenSSH 8.0 (protocol 2.0)
+     	    		80/tcp  open  http?
+     	    		110/tcp open  pop3     Dovecot pop3d
+     	    		143/tcp open  imap     Dovecot imapd
+     	    		443/tcp open  https?
+     	    		465/tcp open  ssl/smtp Exim smtpd 4.96
+     	    		587/tcp open  smtp     Exim smtpd 4.96
+     	    		993/tcp open  imaps?
+     	    		995/tcp open  pop3s?
+
+iii) Operating System : 
+
+code   --->>>	sudo nmap kmit.in -O
+
+Output --->>> 	Aggressive OS guesses: Actiontec MI424WR-GEN3I WAP (90%), DD-WRT v24-sp2 (Linux 2.4.37) (90%), Linux 3.2 (90%), Linux 4.4 (87%), Microsoft Windows XP SP3 or Windows 7 or Windows Server 2012 (86%), Microsoft Windows XP SP3 (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+
+	
